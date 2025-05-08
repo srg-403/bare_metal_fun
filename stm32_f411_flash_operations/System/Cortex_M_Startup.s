@@ -135,20 +135,20 @@ Additional information:
 _vectors:
         VECTOR __stack_end__
         VECTOR Reset_Handler
-        ISR_HANDLER NMI_Handler
-        VECTOR HardFault_Handler
-        ISR_HANDLER MemManage_Handler 
-        ISR_HANDLER BusFault_Handler
-        ISR_HANDLER UsageFault_Handler
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_HANDLER SVC_Handler
-        ISR_HANDLER DebugMon_Handler
-        ISR_RESERVED
-        ISR_HANDLER PendSV_Handler
-        ISR_HANDLER SysTick_Handler
+        //ISR_HANDLER NMI_Handler
+        //VECTOR HardFault_Handler
+        //ISR_HANDLER MemManage_Handler 
+        //ISR_HANDLER BusFault_Handler
+        //ISR_HANDLER UsageFault_Handler
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_HANDLER SVC_Handler
+        //ISR_HANDLER DebugMon_Handler
+        //ISR_RESERVED
+        //ISR_HANDLER PendSV_Handler
+        //ISR_HANDLER SysTick_Handler
         //
         // Add external interrupt vectors here.
         // Example:

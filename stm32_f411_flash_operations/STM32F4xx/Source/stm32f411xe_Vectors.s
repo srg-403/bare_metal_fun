@@ -170,30 +170,30 @@ _vectors:
         //
         VECTOR __stack_end__
         VECTOR Reset_Handler
-        EXC_HANDLER NMI_Handler
-        VECTOR HardFault_Handler
+        //EXC_HANDLER NMI_Handler
+        //VECTOR HardFault_Handler
 #ifdef __ARM_ARCH_6M__
         ISR_RESERVED
         ISR_RESERVED
         ISR_RESERVED
 #else
-        EXC_HANDLER MemManage_Handler
-        EXC_HANDLER BusFault_Handler
-        EXC_HANDLER UsageFault_Handler
+        //EXC_HANDLER MemManage_Handler
+        //EXC_HANDLER BusFault_Handler
+        //EXC_HANDLER UsageFault_Handler
 #endif
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        EXC_HANDLER SVC_Handler
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //EXC_HANDLER SVC_Handler
 #ifdef __ARM_ARCH_6M__
         ISR_RESERVED
 #else
-        EXC_HANDLER DebugMon_Handler
+        //EXC_HANDLER DebugMon_Handler
 #endif
-        ISR_RESERVED
-        EXC_HANDLER PendSV_Handler
-        EXC_HANDLER SysTick_Handler
+        //ISR_RESERVED
+        //EXC_HANDLER PendSV_Handler
+        //EXC_HANDLER SysTick_Handler
         //
         // External interrupts
         //
@@ -202,7 +202,7 @@ _vectors:
         //ISR_HANDLER PVD_IRQHandler
         //ISR_HANDLER TAMP_STAMP_IRQHandler
         //ISR_HANDLER RTC_WKUP_IRQHandler
-        ISR_HANDLER FLASH_IRQHandler
+        //ISR_HANDLER FLASH_IRQHandler
         //ISR_HANDLER RCC_IRQHandler
         //ISR_HANDLER EXTI0_IRQHandler
         //ISR_HANDLER EXTI1_IRQHandler
@@ -237,34 +237,34 @@ _vectors:
         //ISR_HANDLER SPI2_IRQHandler
         //ISR_HANDLER USART1_IRQHandler
         //ISR_HANDLER USART2_IRQHandler
-        ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER EXTI15_10_IRQHandler
         //ISR_HANDLER RTC_Alarm_IRQHandler
         //ISR_HANDLER OTG_FS_WKUP_IRQHandler
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER DMA1_Stream7_IRQHandler
-        ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER SDIO_IRQHandler
         //ISR_HANDLER TIM5_IRQHandler
         //ISR_HANDLER SPI3_IRQHandler
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_HANDLER DMA2_Stream0_IRQHandler
-        ISR_HANDLER DMA2_Stream1_IRQHandler
-        ISR_HANDLER DMA2_Stream2_IRQHandler
-        ISR_HANDLER DMA2_Stream3_IRQHandler
-        ISR_HANDLER DMA2_Stream4_IRQHandler
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_HANDLER DMA2_Stream0_IRQHandler
+        //ISR_HANDLER DMA2_Stream1_IRQHandler
+        //ISR_HANDLER DMA2_Stream2_IRQHandler
+        //ISR_HANDLER DMA2_Stream3_IRQHandler
+        //ISR_HANDLER DMA2_Stream4_IRQHandler
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER OTG_FS_IRQHandler
         //ISR_HANDLER DMA2_Stream5_IRQHandler
         //ISR_HANDLER DMA2_Stream6_IRQHandler
@@ -272,16 +272,16 @@ _vectors:
         //ISR_HANDLER USART6_IRQHandler
         //ISR_HANDLER I2C3_EV_IRQHandler
         //ISR_HANDLER I2C3_ER_IRQHandler
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
-        ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER FPU_IRQHandler
-        ISR_RESERVED
-        ISR_RESERVED
+        //ISR_RESERVED
+        //ISR_RESERVED
         //ISR_HANDLER SPI4_IRQHandler
         //ISR_HANDLER SPI5_IRQHandler
 #endif

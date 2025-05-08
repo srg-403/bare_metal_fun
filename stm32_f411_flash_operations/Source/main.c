@@ -14,19 +14,17 @@ Purpose : Generic application start
 #include "helper.h"
 
 #define PROGRAM_DATA
-#define ON          (1U)
-#define OFF         (0U) 
+#define SECTOR_ERASE
+#define GPIOA_MODER   (*(uint32_t*)(0x40020000 + 0x00))
+#define GPIOA_ODR     (*(uint32_t*)(0x40020000 + 0x14))
+#define ON            (1U)
+#define OFF           (0U) 
 
-#define P_8_BIT      (0U)
-#define P_16_BIT     (1U)
-#define P_32_BIT     (2U)
-#define P_64_BIT     (3U)
+
 
 void flash_led(uint8_t state){
     volatile uint32_t *RCC_AHB1ENR = (uint32_t*)0x40023830;
     *RCC_AHB1ENR |= (1U << 0);
-    #define GPIOA_MODER  (*(uint32_t*)(0x40020000 + 0x00))
-    #define GPIOA_ODR    (*(uint32_t*)(0x40020000 + 0x14))
     GPIOA_MODER = (GPIOA_MODER & ~(3U << (10)))
                  |  (1U << (10));         
     GPIOA_ODR |= (state << 5);
@@ -279,7 +277,7 @@ int main(void) {
 
   //erase sector test
   #ifdef SECTOR_ERASE
-  erase_flash_memory_sector_stm32f41(SECTOR_04,7);
+  erase_flash_memory_sector_stm32f41(SECTOR_01, 1);
   #endif
 
   //erase mass test
@@ -289,7 +287,12 @@ int main(void) {
   
   //programm data test
   #ifdef PROGRAM_DATA
-  program_flash_memory(P_32_BIT,MY_MEMORY_ADDRESS_STM32F411, 0xBABEAFFE);
+  uint32_t offset = 0;
+  for (int i = 0; i<5000; i++) {
+    program_flash_memory(P_32_BIT , (volatile uint32_t*)(MY_MEMORY_ADDRESS_STM32F411 + offset), 0xDEADAFFE);
+    offset += 0x4U;
+  }
+    
   #endif
 
   while (1);
