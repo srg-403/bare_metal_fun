@@ -7,6 +7,7 @@
 #define FLASH_KEYR_STM32F411          ((volatile uint32_t*)(FLASH_BASE_STM32F411 + 0x04))  
 #define FLASH_CR_REGISTER_STM32F411   ((volatile uint32_t*)(FLASH_BASE_STM32F411 + 0x10))  
 #define FLASH_SR_REGISTER_STM32F411   ((volatile uint32_t*)(FLASH_BASE_STM32F411 + 0x0C))  
+#define MY_MEMORY_ADDRESS_STM32F411   ((volatile uint32_t*)0x8004000U)
 //masks
 #define FLASH_SR_BSY_MASK             (1U << 16U)                        //mask for Busy bit
 #define FLASH_SR_PGERR_MASK           (1U << 2U)                         //mask for Programming error bit
